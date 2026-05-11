@@ -31,7 +31,7 @@ st.markdown("""
     --accent:      #0071E3;
     --accent-soft: #EBF3FD;
     --text:        #1D1D1F;
-    --text-2:      #FFFFFF;
+    --text-2:      #6E6E73;
     --border:      #E5E5E7;
     --shadow-sm:   0 2px 8px rgba(0,0,0,.06);
     --shadow-md:   0 8px 32px rgba(0,0,0,.09);
