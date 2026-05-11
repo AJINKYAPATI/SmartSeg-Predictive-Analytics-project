@@ -26,7 +26,7 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap');
 
 :root {
-    --bg:          #000000;
+    --bg:          #F5F5F7;
     --surface:     #FFFFFF;
     --accent:      #0071E3;
     --accent-soft: #EBF3FD;
@@ -43,7 +43,7 @@ st.markdown("""
 html, body, [class*="css"] {
     font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: var(--bg) !important;
-    color: var(--text);
+    color:#FFFFFF;
     -webkit-font-smoothing: antialiased;
 }
 
