@@ -247,7 +247,7 @@ def load_data(uploaded_file):
         st.sidebar.success("File uploaded successfully!")
         df = pd.read_csv(
             uploaded_file,
-            encoding='cp1252',
+            encoding='utf-8',
             encoding_errors='ignore',
             sep=r'\s+',
             header=None,
