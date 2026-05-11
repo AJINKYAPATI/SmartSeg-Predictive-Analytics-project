@@ -47,7 +47,7 @@ html, body, [class*="css"] {
     -webkit-font-smoothing: antialiased;
 }
 
-#MainMenu, footer, header { visibility: hidden; }
+#MainMenu, footer, header 
 .stDeployButton { display: none; }
 .block-container {
     padding: 2rem 2.5rem 4rem;
@@ -215,12 +215,13 @@ with st.sidebar:
     st.markdown('<p style="padding:.4rem 1.6rem;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-2);margin:0;">Navigation</p>', unsafe_allow_html=True)
 
     menu  = ["Business Understanding","Data Understanding","Data preparation","Modeling & Evaluation","Predict"]
+
     icons = ["◉","◎","◑","◈","◆"]
     choice = st.selectbox("", menu, label_visibility="collapsed")
 
     for i, item in enumerate(menu):
         active = item == choice
-        bg  = "#EBF3FD"   if active else "transparent"
+        bg  = "#E0E7EC"   if active else "transparent"
         col = "#0071E3"   if active else "#6E6E73"
         fw  = "600"       if active else "400"
         st.markdown(f"""
@@ -246,7 +247,7 @@ def load_data(uploaded_file):
         st.sidebar.success("File uploaded successfully!")
         df = pd.read_csv(
             uploaded_file,
-            encoding='utf-8',
+            encoding='cp1252',
             encoding_errors='ignore',
             sep=r'\s+',
             header=None,
@@ -305,7 +306,7 @@ if choice == 'Business Understanding':
     """, unsafe_allow_html=True)
 
     c1, c2, c3, c4 = st.columns(4)
-    with c1: metric_card("Personalization", "1:1",  "Tailored strategies per segment", accent=True)
+    with c1: metric_card("Personalization", "1:1",  "Tailored strategies per segment", )
     with c2: metric_card("Optimization",   "↑ ROI", "Efficient resource allocation")
     with c3: metric_card("Insight",        "360°",  "Deep customer understanding")
     with c4: metric_card("Engagement",     "+ NPS", "Satisfaction & retention")
@@ -569,7 +570,7 @@ elif choice == 'Data preparation':
 elif choice == 'Modeling & Evaluation':
 
     page_header("🤖","Modeling & Evaluation",
-                "KMeans clustering with RFM features · Elbow method for optimal k", dark=True)
+                "KMeans clustering with RFM features · Elbow method for optimal k", )
 
     if st.session_state['df'] is not None:
         df = st.session_state['df']
@@ -725,6 +726,7 @@ elif choice == 'Modeling & Evaluation':
 # ════════════════════════════════════════════════════════════════════════════════
 # PAGE : PREDICT
 # ════════════════════════════════════════════════════════════════════════════════
+
 elif choice == 'Predict':
 
     st.markdown("""
